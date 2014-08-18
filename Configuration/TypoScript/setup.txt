@@ -1,0 +1,48 @@
+
+plugin.tx_lbodocuments {
+	view {
+		templateRootPath = {$plugin.tx_lbodocuments.view.templateRootPath}
+		partialRootPath = {$plugin.tx_lbodocuments.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_lbodocuments.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_lbodocuments.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+
+    settings {
+        type {
+            pdf {
+                icon = fileadmin/templates/clp/icones/pdf.png
+            }
+
+            odt {
+                icon = fileadmin/templates/clp/icones/odt.png
+            }
+
+            doc {
+                icon = fileadmin/templates/clp/icones/docx.png
+            }
+
+            docx {
+                icon = fileadmin/templates/clp/icones/docx.png
+            }
+
+            xls {
+                icon = fileadmin/templates/clp/icones/xls.png
+            }
+
+             xlsx {
+                icon = fileadmin/templates/clp/icones/xls.png
+            }
+
+            csv {
+                icon = fileadmin/templates/clp/icones/xls.png
+            }
+        }
+    }
+
+}

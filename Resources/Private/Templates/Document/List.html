@@ -1,0 +1,59 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<f:flashMessages renderMode="div" />
+<ul class="documents-list">
+	<f:for each="{documents}" as="document">
+		<li>
+            <f:if condition="{document.lien}">
+                <div class="document-icon">
+                    <f:for each="{settings.type}" as="type" key="key">
+                        <f:if condition="{key} == {document.type}">
+                            <img src="{type.icon}" alt=" " />
+                        </f:if>
+                    </f:for>
+                </div>
+            </f:if>
+
+             <div class="document-informations {f:if(condition: document.lien, then: 'with-image')}">
+                <f:if condition="{document.lien}">
+                    <f:then>
+                        <a href="/fileadmin{document.lien.originalResource.originalFile.identifier}" target="_blank">
+                            {document.titre}
+                            <span class="document-detail">(<span class="document-type">{document.type}</span> <span class="document-size">{document.size})</span></span>
+                            <span class="visuallyhidden">
+                                Cet hyperlien s'ouvrira dans une nouvelle fenêtre.
+                            </span>
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="external-icon" x="0px" y="0px" width="15px" height="15px" viewBox="276.875 333.917 34.542 34.467" xml:space="preserve"><g><path fill="#1D1D1B" d="M311.417,368.384h-34.542v-34.467h34.542V368.384z M279.375,365.884h29.542v-29.467h-29.542V365.884z"></path></g><g><polygon fill="#1D1D1B" points="286.752,361.084 295.943,351.894 299.941,355.891 303.811,341.484 289.405,345.355 293.402,349.352 284.211,358.543"></polygon></g> <a href="http://www.google.com" target="_blank" class="external-link-new-window">liens externe</a></svg>
+                        </a>
+                    </f:then>
+                    <f:else>
+                        <f:link.action pageUid="{settings.DetailUid}" action="show" arguments="{document : document}" target="_blank" >
+                            {document.titre}
+                            <span class="visuallyhidden">
+                                Cet hyperlien s'ouvrira dans une nouvelle fenêtre.
+                            </span>
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="external-icon" x="0px" y="0px" width="15px" height="15px" viewBox="276.875 333.917 34.542 34.467" xml:space="preserve"><g><path fill="#1D1D1B" d="M311.417,368.384h-34.542v-34.467h34.542V368.384z M279.375,365.884h29.542v-29.467h-29.542V365.884z"></path></g><g><polygon fill="#1D1D1B" points="286.752,361.084 295.943,351.894 299.941,355.891 303.811,341.484 289.405,345.355 293.402,349.352 284.211,358.543"></polygon></g> <a href="http://www.google.com" target="_blank" class="external-link-new-window">liens externe</a></svg>
+                        </f:link.action>
+                    </f:else>
+                </f:if>
+                <p class="document-description">
+                    {document.description}
+                </p>
+             </div>
+		</li>
+	</f:for>
+</ul>
+</f:section>

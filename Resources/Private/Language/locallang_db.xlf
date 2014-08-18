@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-08-15T13:16:55Z" product-name="lbo_documents">
+		<header/>
+		<body>
+			<trans-unit id="tx_lbodocuments_domain_model_document">
+				<source>Document</source>
+			</trans-unit>
+			<trans-unit id="tx_lbodocuments_domain_model_document.titre">
+				<source>Titre</source>
+			</trans-unit>
+			<trans-unit id="tx_lbodocuments_domain_model_document.lien">
+				<source>Lien</source>
+			</trans-unit>
+			<trans-unit id="tx_lbodocuments_domain_model_document.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_lbodocuments_domain_model_document.contenu">
+				<source>Contenu</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
