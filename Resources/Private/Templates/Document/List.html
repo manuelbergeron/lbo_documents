@@ -16,12 +16,12 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <f:flashMessages renderMode="div" />
 <ul class="documents-list">
 	<f:for each="{documents}" as="document">
-		<li>
+		<li class="clearfix">
             <f:if condition="{document.lien}">
                 <div class="document-icon">
                     <f:for each="{settings.type}" as="type" key="key">
                         <f:if condition="{key} == {document.type}">
-                            <img src="{type.icon}" alt=" " />
+                            <img src="{type.icon}" alt="" />
                         </f:if>
                     </f:for>
                 </div>

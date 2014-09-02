@@ -84,18 +84,23 @@ class DocumentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 
     private function formatSizeUnits($bytes)
     {
+        $gb =\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate("tx_lbodocuments_domain_model_document.filesize.gb", "lbo_documents");
+        $mb =\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate("tx_lbodocuments_domain_model_document.filesize.mb", "lbo_documents");
+        $kb =\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate("tx_lbodocuments_domain_model_document.filesize.kb", "lbo_documents");
+        $bt =\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate("tx_lbodocuments_domain_model_document.filesize.byte", "lbo_documents");
+        $bts =\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate("tx_lbodocuments_domain_model_document.filesize.bytes", "lbo_documents");
         if ($bytes >= 1073741824) {
-            $bytes = number_format($bytes / 1073741824, 2) . ' Gb';
+            $bytes = number_format($bytes / 1073741824, 2) . ' ' . $gb;
         } elseif ($bytes >= 1048576) {
-            $bytes = number_format($bytes / 1048576, 2) . ' Mb';
+            $bytes = number_format($bytes / 1048576, 2) . ' ' . $mb;
         } elseif ($bytes >= 1024) {
-            $bytes = number_format($bytes / 1024, 2) . ' Kb';
+            $bytes = number_format($bytes / 1024, 2) . ' ' . $kb;
         } elseif ($bytes > 1) {
-            $bytes = $bytes . ' bits';
+            $bytes = $bytes . ' ' .$bts;
         } elseif ($bytes == 1) {
-            $bytes = $bytes . ' bit';
+            $bytes = $bytes . ' ' . $bt;
         } else {
-            $bytes = '0 bytes';
+            $bytes = '0 ' . $bt;
         }
 
         return $bytes;
