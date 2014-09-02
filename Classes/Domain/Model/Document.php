@@ -31,8 +31,28 @@ namespace Libeo\LboDocuments\Domain\Model;
  * Document
  */
 class Document extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+    /**
+     * @var DateTime
+     */
+    protected $crdate;
 
-	/**
+    /**
+     * @var DateTime
+     */
+    protected $tstamp;
+
+    /**
+     * @var DateTime
+     */
+    protected $starttime;
+
+    /**
+     * @var DateTime
+     */
+    protected $endtime;
+
+
+    /**
 	 * titre
 	 *
 	 * @var string
@@ -182,5 +202,162 @@ class Document extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	public function setContenu($contenu) {
 		$this->contenu = $contenu;
 	}
+
+    /**
+     * Get creation date
+     *
+     * @return integer
+     */
+    public function getCrdate() {
+        return $this->crdate;
+    }
+
+    /**
+     * Set creation date
+     *
+     * @param integer $crdate
+     * @return void
+     */
+    public function setCrdate($crdate) {
+        $this->crdate = $crdate;
+    }
+
+    /**
+     * Get year of crdate
+     *
+     * @return integer
+     */
+    public function getYearOfCrdate() {
+        return $this->getCrdate()->format('Y');
+    }
+
+    /**
+     * Get month of crdate
+     *
+     * @return integer
+     */
+    public function getMonthOfCrdate() {
+        return $this->getCrdate()->format('m');
+    }
+
+    /**
+     * Get day of crdate
+     *
+     * @return integer
+     */
+    public function getDayOfCrdate() {
+        return (int)$this->crdate->format('d');
+    }
+
+    /**
+     * Get timestamp
+     *
+     * @return integer
+     */
+    public function getTstamp() {
+        return $this->tstamp;
+    }
+
+    /**
+     * Set time stamp
+     *
+     * @param integer $tstamp time stamp
+     * @return void
+     */
+    public function setTstamp($tstamp) {
+        $this->tstamp = $tstamp;
+    }
+
+    /**
+    * Get start time
+    *
+    * @return DateTime
+    */
+    public function getStarttime() {
+        return $this->starttime;
+    }
+
+    /**
+     * Set start time
+     *
+     * @param integer $starttime start time
+     * @return void
+     */
+    public function setStarttime($starttime) {
+        $this->starttime = $starttime;
+    }
+
+    /**
+     * Get year of starttime
+     *
+     * @return integer
+     */
+    public function getYearOfStarttime() {
+        return $this->getStarttime()->format('Y');
+    }
+
+    /**
+     * Get month of starttime
+     *
+     * @return integer
+     */
+    public function getMonthOfStarttime() {
+        return $this->getStarttime()->format('m');
+    }
+
+    /**
+     * Get day of starttime
+     *
+     * @return integer
+     */
+    public function getDayOfStarttime() {
+        return (int)$this->starttime->format('d');
+    }
+
+    /**
+     * Get endtime
+     *
+     * @return DateTime
+     */
+    public function getEndtime() {
+        return $this->endtime;
+    }
+
+    /**
+     * Set end time
+     *
+     * @param integer $endtime end time
+     * @return void
+     */
+    public function setEndtime($endtime) {
+        $this->endtime = $endtime;
+    }
+
+    /**
+     * Get year of endtime
+     *
+     * @return integer
+     */
+    public function getYearOfEndtime() {
+        return $this->getEndtime()->format('Y');
+    }
+
+    /**
+     * Get month of endtime
+     *
+     * @return integer
+     */
+    public function getMonthOfEndtime() {
+        return $this->getEndtime()->format('m');
+    }
+
+    /**
+     * Get day of endtime
+     *
+     * @return integer
+     */
+    public function getDayOfEndtime() {
+        return (int)$this->endtime->format('d');
+    }
 
 }

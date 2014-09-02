@@ -96,7 +96,12 @@ $GLOBALS['TCA']['tx_lbodocuments_domain_model_document'] = array(
 				),
 			),
 		),
-
+        'crdate' => array(
+            'label' => 'crdate',
+            'config' => array(
+                'type' => 'passthrough',
+            )
+        ),
 		'titre' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lbo_documents/Resources/Private/Language/locallang_db.xlf:tx_lbodocuments_domain_model_document.titre',

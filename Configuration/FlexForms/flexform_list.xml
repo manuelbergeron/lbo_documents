@@ -35,6 +35,54 @@
                             </config>
                         </TCEforms>
                     </settings.DetailUid>
+                    <!-- PID list Page -->
+                    <settings.ShowDates>
+                        <TCEforms>
+                            <label>Afficher les dates d'ajout</label>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </settings.ShowDates>
+
+                    <settings.OrderBy>
+                        <TCEforms>
+                            <label>Trier par</label>
+                            <config>
+                                <type>select</type>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Uid</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Date de création</numIndex>
+                                        <numIndex index="1">2</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.OrderBy>
+
+                    <settings.OrderDirection>
+                        <TCEforms>
+                            <label>Ordre de trie</label>
+                            <config>
+                                <type>select</type>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Ascendant</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Descendant</numIndex>
+                                        <numIndex index="1">2</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.OrderDirection>
+
                 </el>
             </ROOT>
         </sDEF>

@@ -32,5 +32,4 @@ namespace Libeo\LboDocuments\Domain\Repository;
  */
 class DocumentRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 
-	
 }

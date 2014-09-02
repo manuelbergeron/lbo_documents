@@ -46,6 +46,25 @@ class DocumentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	 * @return void
 	 */
 	public function listAction() {
+        $direction = \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING;
+
+        if ($this->settings["OrderDirection"] == '2') {
+            $direction = \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING;
+        }
+
+        switch ($this->settings["OrderBy"]) {
+            case '2' :
+                $this->documentRepository->setDefaultOrderings(array( 'crdate' => $direction));
+                echo "CRDATE " . $direction;
+                break;
+            case '1':
+            default:
+                $this->documentRepository->setDefaultOrderings(array( 'uid' => $direction));
+                echo "uid " . $direction;
+                break;
+        }
+
+
 		$documents = $this->documentRepository->findAll()->toArray();
         foreach($documents as $i => $document) {
             $documents[$i] = $this->evaluateUrl($document);
@@ -100,7 +119,7 @@ class DocumentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         } elseif ($bytes == 1) {
             $bytes = $bytes . ' ' . $bt;
         } else {
-            $bytes = '0 ' . $bt;
+            $bytes = '0 bytes';
         }
 
         return $bytes;
