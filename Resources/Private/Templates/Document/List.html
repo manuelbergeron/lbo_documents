@@ -16,17 +16,16 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <f:flashMessages renderMode="div" />
 <ul class="documents-list">
 	<f:for each="{documents}" as="document">
-		<li>
+		<li class="clearfix">
             <f:if condition="{document.lien}">
                 <div class="document-icon">
                     <f:for each="{settings.type}" as="type" key="key">
                         <f:if condition="{key} == {document.type}">
-                            <img src="{type.icon}" alt=" " />
+                            <img src="{type.icon}" alt="" />
                         </f:if>
                     </f:for>
                 </div>
             </f:if>
-
              <div class="document-informations {f:if(condition: document.lien, then: 'with-image')}">
                 <f:if condition="{document.lien}">
                     <f:then>
@@ -49,6 +48,15 @@ Otherwise your changes will be overwritten the next time you save the extension 
                         </f:link.action>
                     </f:else>
                 </f:if>
+                <f:if condition="{settings.ShowDates}">
+                    <f:then>
+                        <span class="documents-date">
+                            <f:format.date format="d F Y">{document.crdate}</f:format.date>
+                        </span>
+                    </f:then>
+                </f:if>
+
+
                 <p class="document-description">
                     {document.description}
                 </p>

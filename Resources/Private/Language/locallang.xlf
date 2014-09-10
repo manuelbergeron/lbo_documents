@@ -18,6 +18,21 @@
 			<trans-unit id="tx_lbodocuments_domain_model_document.contenu">
 				<source>Contenu</source>
 			</trans-unit>
+            <trans-unit id="tx_lbodocuments_domain_model_document.filesize.gb">
+                <source>Go</source>
+            </trans-unit>
+            <trans-unit id="tx_lbodocuments_domain_model_document.filesize.mb">
+                <source>Mo</source>
+            </trans-unit>
+            <trans-unit id="tx_lbodocuments_domain_model_document.filesize.kb">
+                <source>Ko</source>
+            </trans-unit>
+            <trans-unit id="tx_lbodocuments_domain_model_document.filesize.byte">
+                <source>Octet</source>
+            </trans-unit>
+            <trans-unit id="tx_lbodocuments_domain_model_document.filesize.bytes">
+                <source>Octets</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

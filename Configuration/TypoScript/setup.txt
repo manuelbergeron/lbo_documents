@@ -15,32 +15,190 @@ plugin.tx_lbodocuments {
 
     settings {
         type {
-            pdf {
-                icon = fileadmin/templates/clp/icones/pdf.png
+            asc {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/asc.png
             }
 
-            odt {
-                icon = fileadmin/templates/clp/icones/odt.png
+            cer {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/cer.png
             }
-
+        
+            gpg {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/gpg.png
+            }
+        
+                ## Filetypes: Archives
+            bz2 {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/bz2.png
+            }
+        
+            deb {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/deb.png
+            }
+        
+            gz {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/gz.png
+            }
+        
+            t3x {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/t3x.png
+            }
+        
+            tgz {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/tgz.png
+            }
+        
+            zip {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/zip.png
+            }
             doc {
-                icon = fileadmin/templates/clp/icones/docx.png
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/doc.png
             }
-
+        
             docx {
-                icon = fileadmin/templates/clp/icones/docx.png
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/docx.png
             }
-
+        
+            pps {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/pps.png
+            }
+        
+            ppt {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/ppt.png
+            }
+        
+            pptx {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/pptx.png
+            }
+        
+            vsd {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/vsd.png
+            }
+        
             xls {
-                icon = fileadmin/templates/clp/icones/xls.png
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/xls.png
+            }
+        
+            xlsx {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/xlsx.png
             }
 
-             xlsx {
-                icon = fileadmin/templates/clp/icones/xls.png
+            c {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/c.png
+
+            }
+        
+            cpp {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/cpp.png
+            }
+        
+            h {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/h.png
+            }
+        
+            java {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/java.png
+            }
+        
+            vhd {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/vhd.png
+            }
+        
+                ## Filetypes: LaTeX and Cie
+            dvi {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/dvi.png
+            }
+        
+            pdf {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/pdf.png
+            }
+        
+            pl {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/txt.png
+            }
+        
+            ps {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/ps.png
+            }
+        
+            tex {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/tex.png
+            }
+        
+                ## Filetypes: Multimedia
+            mid {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/mid.png
+            }
+        
+            mov {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/mov.png
+            }
+        
+            mp3 {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/mp3.png
+            }
+        
+            m4a {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/m4a.png
+            }
+        
+            mpg {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/mpeg.png
+            }
+        
+            wav {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/wav.png
             }
 
-            csv {
-                icon = fileadmin/templates/clp/icones/xls.png
+            eps {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/eps.png
+            }
+        
+            gif {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/gif.png
+            }
+        
+            jpg {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/jpg.png
+            }
+        
+            png {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/png.png
+            }
+        
+            psd {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/psd.png
+            }
+            dtd {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/dtd.png
+            }
+        
+            exe {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/exe.png
+            }
+        
+            patch {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/txt.png
+            }
+        
+            diff {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/txt.png
+            }
+        
+            sh {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/sh.png
+            }
+        
+            sql {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/txt.png
+            }
+        
+            txt {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/txt.png
+            }
+        
+            xml {
+                icon = EXT:lbo_documents/Resources/Public/Icons/filetypes/xml.png
             }
         }
     }
