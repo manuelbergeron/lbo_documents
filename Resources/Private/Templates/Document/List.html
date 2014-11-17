@@ -31,7 +31,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                     <f:then>
                         <a href="/fileadmin{document.lien.originalResource.originalFile.identifier}" target="_blank">
                             {document.titre}
-                            <span class="document-detail">(<span class="document-type">{document.type}</span> <span class="document-size">{document.size})</span></span>
+                            <span class="document-detail">(<span class="document-type">{document.type}</span> <span class="document-size">{document.formatedFileSize})</span></span>
                             <span class="visuallyhidden">
                                 Cet hyperlien s'ouvrira dans une nouvelle fenêtre.
                             </span>
@@ -57,9 +57,9 @@ Otherwise your changes will be overwritten the next time you save the extension 
                 </f:if>
 
 
-                <p class="document-description">
-                    {document.description}
-                </p>
+                <div class="document-description">
+                    <f:format.html>{document.description}</f:format.html>
+                </div>
              </div>
 		</li>
 	</f:for>
