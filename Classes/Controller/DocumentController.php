@@ -48,18 +48,12 @@ class DocumentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	public function listAction() {
         $direction = \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING;
 
-        if ($this->settings["OrderDirection"] == '2') {
+        if ($this->settings["OrderDirection"] == "desc") {
             $direction = \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING;
         }
 
-        switch ($this->settings["OrderBy"]) {
-            case '2' :
-                $this->documentRepository->setDefaultOrderings(array( 'crdate' => $direction));
-                break;
-            case '1':
-            default:
-                $this->documentRepository->setDefaultOrderings(array( 'uid' => $direction));
-                break;
+        if ($this->settings["OrderBy"]) {
+            $this->documentRepository->setDefaultOrderings(array( $this->settings["OrderBy"] => $direction));
         }
 
 
