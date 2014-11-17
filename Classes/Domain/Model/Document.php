@@ -53,6 +53,12 @@ class Document extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 
     /**
+     * formatedFileSize
+     * @var string
+     */
+    protected $formatedFileSize;
+
+    /**
 	 * titre
 	 *
 	 * @var string
@@ -358,6 +364,22 @@ class Document extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
      */
     public function getDayOfEndtime() {
         return (int)$this->endtime->format('d');
+    }
+
+    /**
+     * Get formatedFileSize
+     * @return string
+     */
+    public function getFormatedFileSize() {
+        return $this->formatedFileSize;
+    }
+
+    /**
+     * Set formatedFileSize
+     * @param string $formatedFileSize
+     */
+    public function setFormatedFileSize($formatedFileSize) {
+        $this->formatedFileSize = $formatedFileSize;
     }
 
 }

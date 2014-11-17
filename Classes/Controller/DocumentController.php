@@ -95,7 +95,7 @@ class DocumentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         }
 
         $file = $lien->getOriginalResource();
-        $document->setSize($this->formatSizeUnits($file->getSize()));
+        $document->setFormatedFileSize($this->formatSizeUnits($file->getSize()));
         $document->setType($file->getExtension());
 
         return $document;
